@@ -534,7 +534,10 @@ td {
 @media screen and (max-width:599px) {
     th,
     td {
-        padding: 2.75px 5.5px
+        padding: 2.75px 5.5px;
+    }
+    header .visit {
+        display: none !important;
     }
 }
 
