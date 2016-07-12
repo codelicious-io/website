@@ -43,15 +43,15 @@ DEFAULT SCRIPTS
       animationLoop: true,
       slideshow: false,
       slideshowSpeed: 7000,
-      animationSpeed: 800,      
-      itemMargin: 20, 
+      animationSpeed: 800,
+      itemMargin: 20,
       minItems: getNumNewsItems(),
       maxItems: getNumNewsItems(),
       itemWidth: 350,
       directionNav: true,
       controlNav: false,
-      start: function( slider ){                            
-           $('body').addClass('loaded');            
+      start: function( slider ){
+           $('body').addClass('loaded');
       }
     });
 
@@ -242,12 +242,16 @@ DEFAULT SCRIPTS
   //tiny helper function to add breakpoints
     function getNumNewsItems() {     
 
-      if( window.innerWidth < 600 ){
+      if( window.innerWidth < 700 ){
         count = 1;
-      } else if( window.innerWidth < 960 ){
+      } else if( window.innerWidth < 1050 ){
         count = 2;
-      } else {
+      } else if( window.innerWidth < 1400 ){
         count = 3;
+      } else if( window.innerWidth < 1750 ){
+        count = 4;
+      } else {
+        count = 5;
       }
 
       return count;
